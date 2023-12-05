@@ -58,3 +58,37 @@ public class Main {
     - Input: ""
     - Expected Output: ""
     - Pattern: Testing an empty string input to ensure the method handles edge cases appropriately and returns an empty string as expected.
+
+
+
+```java
+public class NextPermutationTest {
+   @Test
+   public void testNextPermutation() {
+      // Test case 1: Basic case
+      final String input1 = "abcd";
+      final String expected1 = "abdc";
+      assertEquals(expected1, NextPermutation.nextPermutation(input1));
+
+      // Test case 2: String with the largest lexicographic order
+      final String input2 = "dcba";
+      final String expected2 = ""; // Since there's no larger permutation possible
+      assertEquals(expected2, NextPermutation.nextPermutation(input2));
+
+      // Test case 3: Random input
+      final String input3 = "egcba";
+      final String expected3 = "geabc";
+      assertEquals(expected3, NextPermutation.nextPermutation(input3));
+
+      // Test case 4: String with repeating characters
+      final String input4 = "aabb";
+      final String expected4 = "abab";
+      assertEquals(expected4, NextPermutation.nextPermutation(input4));
+
+      // Test case 5: Empty string
+      final String input5 = "";
+      final String expected5 = "";
+      assertEquals(expected5, NextPermutation.nextPermutation(input5));
+   }
+}
+```
