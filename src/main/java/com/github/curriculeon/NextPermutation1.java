@@ -7,13 +7,11 @@ import java.util.List;
 
 public class NextPermutation1 {
 
-
     public static String nextPermutation(String word) {
-        List<String> allPermutations = getAllPermutations(word);
-        int wordIndex = allPermutations.indexOf(word);
-        int nextWordIndex = wordIndex + 1;
+        final List<String> allPermutations = getAllPermutations(word);
+        final int wordIndex = allPermutations.indexOf(word);
+        final int nextWordIndex = wordIndex + 1;
         String nextWord = allPermutations.get(nextWordIndex);
-        System.out.println(nextWord);
         if (new HashSet<>(allPermutations).size() == 1) {
             nextWord = "no answer";
         }
